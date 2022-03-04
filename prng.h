@@ -7,7 +7,7 @@
 
 #include <stdlib.h>
 
-#include "time_stamp.h"
+#include "time-stamp.h"
 
 void sprng (uint64_t local_seed);
 

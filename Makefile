@@ -12,7 +12,7 @@ PRNG_X86_C_OBJS=\
 	main.o\
 
 PRNG_X86_ASM_OBJS=\
-	time_stamp.$(EXE_FORMAT)
+	time-stamp.$(EXE_FORMAT)
 
 all: $(EXE)
 
@@ -24,7 +24,6 @@ $(EXE): $(PRNG_X86_C_OBJS) $(PRNG_X86_ASM_OBJS)
 
 %.$(EXE_FORMAT): %.asm
 	$(ASM) $(ASMFLAGS) -o $@ $<	
-
 
 clean:
 	rm -f $(EXE) $(PRNG_X86_C_OBJS) $(PRNG_X86_ASM_OBJS)
