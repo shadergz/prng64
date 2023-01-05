@@ -47,7 +47,7 @@ int main (int argc, char **argv)
 
     puts ("Pseudo random numbers: ");
     for (int i = 0; i < 26; i++)
-        printf ("%d ", aprngi () % 100);
+        printf ("%03d ", aprngi () % 1000);
     puts ("");
     
     return 0;

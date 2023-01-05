@@ -12,11 +12,11 @@ EXE_FORMAT=elf64
 ASMFLAGS=-f $(EXE_FORMAT)
 
 PRNG_X86_C_OBJS=\
-	prng.o\
 	main.o\
+	prng.o\
 
 PRNG_X86_ASM_OBJS=\
-	time-stamp.$(EXE_FORMAT)
+	time-stamp.o
 
 all: $(EXE)
 
