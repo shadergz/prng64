@@ -1,6 +1,10 @@
 CC=clang
-CFLAGS=-Wall -O2 -ffast-math
-ASM=yasm
+CFLAGS=-Wall -O2\
+	-ffast-math\
+	-z noexecstack\
+	-Wno-unused-command-line-argument
+	
+CASM?=yasm
 
 EXE=prng_x86
 EXE_FORMAT=elf64
@@ -22,8 +26,8 @@ $(EXE): $(PRNG_X86_C_OBJS) $(PRNG_X86_ASM_OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-%.$(EXE_FORMAT): %.asm
-	$(ASM) $(ASMFLAGS) -o $@ $<	
+%.o: %.asm
+	$(CASM) $(ASMFLAGS) -o $@ $<	
 
 clean:
 	rm -f $(EXE) $(PRNG_X86_C_OBJS) $(PRNG_X86_ASM_OBJS)
