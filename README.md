@@ -2,7 +2,7 @@
 
 - A Pseudo-random number generator that can use the TSC (Time Stamp Counter) from the host processor
 
-## Examples
+## Usage examples
 
 - With BY_TIME 1 (Using the current raw time as seed)
 
@@ -10,7 +10,7 @@
 sprng (time (NULL));
 ```
 
-- With BY_RANDOM_FILE 1 (Using the pseudo random pseudo file from the Unix env)
+- With BY_RANDOM_FILE 1 (Using the pseudo random file from an Unix env)
 
 ```c
 #if defined (__unix__)

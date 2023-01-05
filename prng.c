@@ -4,8 +4,8 @@
 
 #include "prng.h"
 
-/*  The seed used to help the calculation and to provide an 
- *  better general randomization 
+/*  The seed used to help the calculation and to provide a 
+ *  better general randomization values
 */
 static uint64_t seed = 0;
 
@@ -30,7 +30,6 @@ int32_t prngi (void)
     /*
         λ = n >> 60
         f(x) = x² + x * λ / 2
-
         100
          Σ f(k)
         k=1
